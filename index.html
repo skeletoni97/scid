@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User List</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Список пользователей</h1>
+    <div class="controls">
+      <div class="filter">
+        <label for="Filter">Показать старше 18:</label>
+        <input type="checkbox" id="ageFilter">
+      </div>
+      <div class="sort">
+        <label for="sortOptions">Сортировать по:</label>
+        <select id="sortOptions">
+          <option value="name">name</option>
+          <option value="age">Age</option>
+        </select>
+      </div>
+    </div>
+    <div class="elements" id="userList"></div>
+  </div>
+
+  <template class="element-template">
+    <div class="element">
+      <img class="element__image" src="#" type="button" alt="#">
+      <h2 class="element__name element__h2"></h2>
+      <p class="element__age element__p"></p>
+      <p class="element__email"></p>
+      <button class="element__change-image">Смена аватара</button>
+    </div>
+  </template>
+
+  <script type="module" src="script.js"></script>
+</body>
+
+</html>
